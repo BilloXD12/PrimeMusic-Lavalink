@@ -1,26 +1,4 @@
-/*
-
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-
-
-*/
-
-const { EmbedBuilder } = require('discord.js');
-
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "help",
@@ -29,40 +7,34 @@ module.exports = {
   options: [],
   run: async (client, interaction) => {
     try {
-     
-
       const embed = new EmbedBuilder()
-         .setColor('#0099ff')
-      .setTitle('💎 Prime Music Bot')
-      .setDescription('Welcome to the Music Bot!\n\n- Here are the available commands:\n\n' +
-        '**/play :** Start playing the songs.\n' +
-        '**/ping :** check bot latency.\n' +
-        '**/support :** Display support server info');
+        .setColor("#0099ff")
+        .setTitle("<:SupportsCommands:1243577824477188197> **Basic Commands**")
+        .addFields(
+          {
+            name: "<a:All_connect:1230899360976470160> Ping",
+            value: "Check the bot's latency",
+          },
+          {
+            name: "<a:music:1241029884902641778> Play",
+            value: "Clear the song queue of this server",
+          },
+          {
+            name: "<:discordverify:861292720324476968> Support",
+            value: "Support Server Links",
+          },
+          {
+            name: "<a:utility:1241028673797099520> Help",
+            value: "Display all the helps command",
+          },
+        )
+        .setImage(
+          "https://media.discordapp.net/attachments/1155424116887797790/1222196420241653882/standard_1.gif?ex=6615561d&is=6602e11d&hm=24c48480bcee4c72ee4358ddb3b28142c9445a5496ec64f472240a55eeda6206&=",
+        );
 
       return interaction.reply({ embeds: [embed] });
     } catch (e) {
-    console.error(e); 
-  }
+      console.error(e);
+    }
   },
 };
-
-/*
-
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-
-
-*/
