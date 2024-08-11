@@ -29,7 +29,7 @@ module.exports = {
   options: [],
   run: async (client, interaction) => {
     try {
-      const botName = client.user.username; 
+      const botName = client.user.username;
 
       const helpDescription = `
 \`\`\`css
@@ -54,10 +54,12 @@ Your ultimate music companion on Discord. Here are the available commands:
       const embed = new EmbedBuilder()
         .setColor(config.embedColor)
         .setTitle(`${botName} Help`)
-        .setThumbnail(client.user.displayAvatarURL()) 
+        .setThumbnail(client.user.displayAvatarURL())
         .setDescription(helpDescription)
-        .setFooter({ text: `Prime Music v1.0`, iconURL: client.user.displayAvatarURL() }) 
-      
+        .setFooter({ text: `Music By Billo`, iconURL: client.user.displayAvatarURL() })
+        .setImage(
+          "https://media.discordapp.net/attachments/1155424116887797790/1222196420241653882/standard_1.gif?ex=6615561d&is=6602e11d&hm=24c48480bcee4c72ee4358ddb3b28142c9445a5496ec64f472240a55eeda6206&=")
+
 
       return interaction.reply({ embeds: [embed] });
     } catch (e) {
